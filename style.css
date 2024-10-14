@@ -1,0 +1,135 @@
+:root {
+    --white: #fff;
+    --blue: #86d3ff;
+    --purple: #e584fc; 
+    --dark: #333;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+.watch {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--white);
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px var(--shadow-color);
+    padding: 40px 20px;
+}
+
+.watch img {
+    padding: 40px 0 20px 0;
+    width: 20%;
+    height: auto;
+    animation: rotate 2s infinite linear;
+}
+
+.watch .time {
+    font-size: 4rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+    color: var(--dark);
+}
+
+@keyframes rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.controls button {
+    font-size: 1.2rem;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    padding: 12px 24px;
+    border-radius: 30px;
+    transition: all .3s ease;
+    color: var(--white);
+    user-select: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+}
+
+.controls #start {
+    background-color: var(--blue);
+}
+
+.controls #stop {
+    background: linear-gradient(90deg, rgba(134, 211, 255, 1) 10%, rgba(229, 132, 252, 1) 100%);
+}
+
+.controls #reset {
+    background-color: var(--purple);
+}
+
+.controls button:hover {
+    transform: scale(1.1);
+}
+
+.controls button:active {
+    transform: scale(0.95);
+}
+
+.log {
+    margin-top: 20px;
+    text-align: left;
+    width: 100%;
+}
+
+.log-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    border-bottom: 1px solid var(--dark);
+}
+
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: var(--dark);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.delete-btn:hover {
+    color: red;
+}
+
+input[type="color"] {
+    margin-top: 20px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
